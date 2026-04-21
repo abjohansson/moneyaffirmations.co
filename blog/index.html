@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Affirmation Blog — Tips, Lists &amp; Daily Practice | MoneyAffirmations.co</title>
+  <meta name="description" content="Explore our money affirmation blog for expert tips, curated lists, and daily practice guides. Discover how to attract wealth and abundance with affirmations.">
+  <link rel="canonical" href="https://moneyaffirmations.co/blog/">
+  <link rel="stylesheet" href="/assets/shared.css">
+  <style>
+    .site-header{position:sticky;top:0;z-index:100;background:var(--dark);border-bottom:1px solid rgba(201,168,76,.2)}
+    .nav-link{color:var(--cream);text-decoration:none;font-size:.9rem;transition:color .2s}
+    .nav-link:hover{color:var(--gold)}
+    .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+    .hero-page{background:var(--dark-2);padding:5rem 1.5rem 3rem;text-align:center}
+    .hero-page h1{font-family:'Playfair Display',serif;color:var(--cream);font-size:clamp(2rem,5vw,3rem);margin:.5rem 0}
+    .hero-page .sub{color:var(--text-muted);max-width:640px;margin:1rem auto;line-height:1.7}
+    .section{padding:4rem 1.5rem}
+    .btn-gold{display:inline-block;background:var(--gold);color:var(--dark);padding:.8rem 2.2rem;border-radius:4px;font-weight:600;text-decoration:none;font-family:'DM Sans',sans-serif;cursor:pointer;border:none;font-size:1rem;transition:background .2s}
+    .btn-gold:hover{background:var(--gold-light)}
+    .btn-outline{display:inline-block;border:2px solid var(--gold);color:var(--gold);padding:.75rem 2rem;border-radius:4px;font-weight:600;text-decoration:none;background:transparent;font-family:'DM Sans',sans-serif;cursor:pointer;font-size:1rem;transition:all .2s}
+    .btn-outline:hover{background:var(--gold);color:var(--dark)}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+    .content-card{background:var(--dark-2);border:1px solid rgba(201,168,76,.15);border-radius:8px;padding:1.5rem;transition:border-color .2s}
+    .content-card:hover{border-color:var(--gold)}
+    .site-footer{padding:3rem 1.5rem;text-align:center;border-top:1px solid rgba(201,168,76,.2);color:var(--text-muted);font-size:.9rem}
+    .site-footer a{color:var(--gold);text-decoration:none}
+    .breadcrumb{font-size:.85rem;color:var(--text-muted);margin-bottom:1.5rem}
+    .breadcrumb a{color:var(--gold);text-decoration:none}
+
+    /* Blog layout */
+    .blog-layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media(max-width:800px){
+      .blog-layout { grid-template-columns: 1fr; }
+      .blog-sidebar { order: 1; }
+      .blog-main { order: 0; }
+    }
+
+    /* Blog cards */
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card h2 {
+      flex-grow: 1;
+    }
+
+    /* Sidebar */
+    .sidebar-widget {
+      background: var(--dark-2);
+      border: 1px solid rgba(201,168,76,.15);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .sidebar-widget h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--cream);
+      font-size: 1.1rem;
+      margin: 0 0 1rem;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid rgba(201,168,76,.15);
+    }
+    .collection-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .collection-links li a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: .9rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .4rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.04);
+      transition: color .2s;
+    }
+    .collection-links li a:hover { color: var(--gold); }
+    .collection-links li a::before {
+      content: '→';
+      color: var(--gold);
+      font-size: .8rem;
+      flex-shrink: 0;
+    }
+
+    /* Newsletter */
+    .newsletter-widget {
+      background: linear-gradient(135deg, #1a1508 0%, var(--dark-2) 100%);
+      border: 1px solid rgba(201,168,76,.25);
+      border-radius: 8px;
+      padding: 1.75rem 1.5rem;
+    }
+    .newsletter-widget h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--cream);
+      font-size: 1.05rem;
+      margin: 0 0 .5rem;
+    }
+    .newsletter-widget p {
+      color: var(--text-muted);
+      font-size: .85rem;
+      line-height: 1.6;
+      margin: 0 0 1rem;
+    }
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .newsletter-form input {
+      width: 100%;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(201,168,76,.2);
+      border-radius: 4px;
+      padding: .65rem 1rem;
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .9rem;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .newsletter-form input::placeholder { color: var(--text-muted); }
+    .newsletter-form input:focus { border-color: var(--gold); }
+    .newsletter-form button {
+      background: var(--gold);
+      color: var(--dark);
+      border: none;
+      border-radius: 4px;
+      padding: .7rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .newsletter-form button:hover { background: var(--gold-light); }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--cream);
+      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+      margin: 0 0 1.5rem;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid rgba(201,168,76,.15);
+    }
+  </style>
+</head>
+<body style="background:var(--dark);color:var(--cream);font-family:'DM Sans',sans-serif;margin:0">
+
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem">
+      <a href="/" style="font-family:'Playfair Display',serif;font-style:italic;color:var(--gold);text-decoration:none;font-size:1.3rem">MoneyAffirmations.co</a>
+      <nav style="display:flex;gap:1.5rem;flex-wrap:wrap">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/money-affirmations/" class="nav-link">Money Affirmations</a>
+        <a href="/abundance-affirmations/" class="nav-link">Abundance</a>
+        <a href="/wealth-affirmations/" class="nav-link">Wealth</a>
+        <a href="/manifestation-affirmations/" class="nav-link">Manifestation</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-page">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Home</a> › Blog</p>
+      <h1>Money Affirmation Blog</h1>
+      <p class="sub">Expert tips, curated affirmation lists, and daily practice guides to help you attract wealth, abundance, and financial freedom through the power of intentional thought.</p>
+    </div>
+  </section>
+
+  <div style="background:var(--dark)">
+    <div class="blog-layout">
+
+      <!-- Main blog posts -->
+      <main class="blog-main">
+        <h2 class="section-title">Latest Articles</h2>
+        <div id="blog-posts-list" class="card-grid">
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Money Affirmations</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">10 Money Affirmations That Really Work</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">Discover the 10 most effective money affirmations backed by neuroscience and positive psychology. Start attracting wealth today.</p>
+            <a href="/blog/10-money-affirmations-that-really-work/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Beginner Guide</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">What Are Money Affirmations?</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">New to affirmations? This complete guide explains what money affirmations are, how they work, and how to start your practice today.</p>
+            <a href="/blog/what-are-money-affirmations/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">How-To Guide</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">How to Use Money Affirmations</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">Learn the exact techniques to use money affirmations for maximum results — timing, repetition, emotion, and belief.</p>
+            <a href="/blog/how-to-use-money-affirmations/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Journaling</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">30-Day Money Affirmation Journal</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">A complete 30-day affirmation journal challenge with daily prompts to rewire your money mindset from the ground up.</p>
+            <a href="/blog/30-day-money-affirmation-journal/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Daily Practice</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">Daily Affirmations for Money</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">Build a powerful daily money affirmation routine with morning and evening affirmations for lasting financial transformation.</p>
+            <a href="/blog/daily-affirmations-for-money/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Money Affirmations</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">I Am a Money Magnet</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">25 powerful "I am a money magnet" affirmations that work fast — plus the science of why this phrase is so effective.</p>
+            <a href="/blog/i-am-a-money-magnet/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Money Affirmations</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">Money Affirmations That Work Instantly</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">20 high-vibration money affirmations designed to shift your energy and attract wealth quickly.</p>
+            <a href="/blog/money-affirmations-that-work-instantly/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Morning Routine</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">Morning Affirmations for Abundance</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">Start every day on a high note with these 20 morning abundance affirmations that set the tone for a wealthy day.</p>
+            <a href="/blog/morning-affirmations-for-abundance/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Law of Attraction</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">Law of Attraction Affirmations for Money</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">21 law of attraction affirmations for money that align your vibration with wealth and abundance.</p>
+            <a href="/blog/law-of-attraction-affirmations-for-money/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Debt Freedom</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">Financial Freedom Affirmations</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">25 powerful financial freedom affirmations to break free from debt and step into a life of abundance.</p>
+            <a href="/blog/financial-freedom-affirmations/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Money Affirmations</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">7 Most Powerful Money Affirmations</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">The 7 most powerful money affirmations of all time — each one explained so you can use it with maximum intention.</p>
+            <a href="/blog/7-most-powerful-money-affirmations/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Inspiration</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">Louise Hay Abundance Affirmations</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">Abundance affirmations inspired by Louise Hay's teachings — 20 self-love and prosperity phrases to transform your mindset.</p>
+            <a href="/blog/louise-hay-abundance-affirmations/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">How-To Guide</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">How to Write Money Affirmations</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">A step-by-step guide to writing effective money affirmations with real before-and-after examples.</p>
+            <a href="/blog/how-to-write-money-affirmations/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Inspiration</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">Bob Proctor Affirmations for Money</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">Money affirmations inspired by Bob Proctor's paradigm-shifting teachings on wealth consciousness and prosperity.</p>
+            <a href="/blog/bob-proctor-affirmations-for-money/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Business</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">Affirmations for Entrepreneurs</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">25 powerful affirmations for entrepreneurs to build wealth, attract clients, and lead with confidence.</p>
+            <a href="/blog/affirmations-for-entrepreneurs/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Business</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">Affirmations for Freelancers</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">20 affirmations for freelancers to raise their rates, attract ideal clients, and overcome imposter syndrome.</p>
+            <a href="/blog/affirmations-for-freelancers/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Women &amp; Money</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">Money Affirmations for Women</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">25 affirmations for women to own their financial power, release money wounds, and build lasting wealth.</p>
+            <a href="/blog/money-affirmations-for-women/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Investing</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">Affirmations for Investing</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">20 affirmations for investors to build the wealth mindset needed to grow rich through smart, patient investing.</p>
+            <a href="/blog/affirmations-for-investing/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Business</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">Affirmations for Sales Confidence</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">20 affirmations for sales professionals to close more deals, handle rejection with ease, and think abundantly.</p>
+            <a href="/blog/affirmations-for-sales-confidence/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+          <article class="content-card blog-card">
+            <span style="font-size:.8rem;color:var(--gold);font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">Career</span>
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">Affirmations for Career Growth</h2>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">20 affirmations for career growth to accelerate promotions, raise your income, and step into your professional power.</p>
+            <a href="/blog/affirmations-for-career-growth/" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More →</a>
+          </article>
+
+        </div>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="blog-sidebar">
+
+        <!-- Newsletter -->
+        <div class="newsletter-widget">
+          <h3>Get Your Daily Affirmation by Email</h3>
+          <p>Join thousands of readers who receive a fresh money affirmation every morning — free.</p>
+          <form class="newsletter-form" onsubmit="return false">
+            <input type="text" placeholder="Your first name" autocomplete="given-name">
+            <input type="email" placeholder="Your email address" autocomplete="email">
+            <button type="submit">Join Free</button>
+          </form>
+        </div>
+
+        <!-- Explore Collections -->
+        <div class="sidebar-widget">
+          <h3>Explore Collections</h3>
+          <ul class="collection-links">
+            <li><a href="/money-affirmations/">Money Affirmations</a></li>
+            <li><a href="/abundance-affirmations/">Abundance Affirmations</a></li>
+            <li><a href="/wealth-affirmations/">Wealth Affirmations</a></li>
+            <li><a href="/manifestation-affirmations/">Manifestation Affirmations</a></li>
+            <li><a href="/prosperity-affirmations/">Prosperity Affirmations</a></li>
+          </ul>
+        </div>
+
+        <!-- Card Deck CTA -->
+        <div class="sidebar-widget" style="text-align:center;background:linear-gradient(135deg,#1a1508 0%,var(--dark-2) 100%);border-color:rgba(201,168,76,.25)">
+          <p style="font-family:'Playfair Display',serif;font-style:italic;color:var(--cream);font-size:1rem;margin:0 0 .5rem;line-height:1.5">"Transform your money mindset one card at a time."</p>
+          <p style="color:var(--text-muted);font-size:.85rem;margin:0 0 1rem;line-height:1.5">52 beautifully designed affirmation cards — instant digital download.</p>
+          <a href="/affirmation-cards/" class="btn-gold" style="font-size:.85rem;padding:.65rem 1.5rem">Get the Card Deck — $9</a>
+        </div>
+
+        <!-- Free Wallpapers -->
+        <div class="sidebar-widget" style="text-align:center">
+          <p style="font-family:'Playfair Display',serif;color:var(--cream);font-size:.95rem;margin:0 0 .5rem">Free Wallpapers</p>
+          <p style="color:var(--text-muted);font-size:.85rem;margin:0 0 1rem;line-height:1.5">Download free 1080×1920 affirmation wallpapers for your phone.</p>
+          <a href="/wallpapers/" class="btn-outline" style="font-size:.85rem;padding:.6rem 1.25rem">Browse Wallpapers</a>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><a href="/">Home</a> · <a href="/money-affirmations/">Money Affirmations</a> · <a href="/abundance-affirmations/">Abundance</a> · <a href="/wealth-affirmations/">Wealth</a> · <a href="/manifestation-affirmations/">Manifestation</a> · <a href="/prosperity-affirmations/">Prosperity</a> · <a href="/blog/">Blog</a> · <a href="/affirmation-cards/">Card Deck</a> · <a href="/wallpapers/">Wallpapers</a></p>
+      <p style="margin-top:1rem">© 2026 MoneyAffirmations.co · All rights reserved</p>
+    </div>
+  </footer>
+
+</body>
+</html>

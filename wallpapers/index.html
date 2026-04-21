@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Money Affirmation Wallpapers — Download Daily | MoneyAffirmations.co</title>
+  <meta name="description" content="Download free money affirmation wallpapers for your phone and desktop. New affirmation wallpaper every day — perfect for Pinterest and as a daily reminder.">
+  <link rel="canonical" href="https://moneyaffirmations.co/wallpapers/">
+  <link rel="stylesheet" href="/assets/shared.css">
+  <style>
+    .site-header{position:sticky;top:0;z-index:100;background:var(--dark);border-bottom:1px solid rgba(201,168,76,.2)}
+    .nav-link{color:var(--cream);text-decoration:none;font-size:.9rem;transition:color .2s}
+    .nav-link:hover{color:var(--gold)}
+    .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+    .hero-page{background:var(--dark-2);padding:5rem 1.5rem 3rem;text-align:center}
+    .hero-page h1{font-family:'Playfair Display',serif;color:var(--cream);font-size:clamp(2rem,5vw,3rem);margin:.5rem 0}
+    .hero-page .sub{color:var(--text-muted);max-width:640px;margin:1rem auto;line-height:1.7}
+    .section{padding:4rem 1.5rem}
+    .btn-gold{display:inline-block;background:var(--gold);color:var(--dark);padding:.8rem 2.2rem;border-radius:4px;font-weight:600;text-decoration:none;font-family:'DM Sans',sans-serif;cursor:pointer;border:none;font-size:1rem;transition:background .2s}
+    .btn-gold:hover{background:var(--gold-light)}
+    .btn-outline{display:inline-block;border:2px solid var(--gold);color:var(--gold);padding:.75rem 2rem;border-radius:4px;font-weight:600;text-decoration:none;background:transparent;font-family:'DM Sans',sans-serif;cursor:pointer;font-size:1rem;transition:all .2s}
+    .btn-outline:hover{background:var(--gold);color:var(--dark)}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+    .content-card{background:var(--dark-2);border:1px solid rgba(201,168,76,.15);border-radius:8px;padding:1.5rem;transition:border-color .2s}
+    .content-card:hover{border-color:var(--gold)}
+    .site-footer{padding:3rem 1.5rem;text-align:center;border-top:1px solid rgba(201,168,76,.2);color:var(--text-muted);font-size:.9rem}
+    .site-footer a{color:var(--gold);text-decoration:none}
+    .breadcrumb{font-size:.85rem;color:var(--text-muted);margin-bottom:1.5rem}
+    .breadcrumb a{color:var(--gold);text-decoration:none}
+
+    /* Wallpaper gallery styles */
+    .wallpaper-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+    .wallpaper-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .75rem;
+    }
+    .wallpaper-preview {
+      width: 180px;
+      height: 320px;
+      background: #0D0C0A;
+      border: 2px solid #C9A84C;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      text-align: center;
+      position: relative;
+      box-sizing: border-box;
+    }
+    .wallpaper-preview::before,
+    .wallpaper-preview::after {
+      content: '';
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      height: 1px;
+      background: #C9A84C;
+      opacity: .6;
+    }
+    .wallpaper-preview::before { top: 20px; }
+    .wallpaper-preview::after  { bottom: 20px; }
+    .wallpaper-preview p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #F8F2E4;
+      font-size: .8rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .wallpaper-preview .watermark {
+      position: absolute;
+      bottom: 8px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .55rem;
+      color: #C9A84C;
+      letter-spacing: .05em;
+    }
+    .dl-btn {
+      background: var(--gold);
+      color: var(--dark);
+      border: none;
+      padding: .45rem 1.1rem;
+      border-radius: 4px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: .85rem;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .dl-btn:hover { background: var(--gold-light); }
+
+    /* Steps */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+    .step {
+      background: var(--dark-2);
+      border: 1px solid rgba(201,168,76,.15);
+      border-radius: 8px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .step h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--cream);
+      margin: 0 0 .5rem;
+      font-size: 1.1rem;
+    }
+    .step p {
+      color: var(--text-muted);
+      font-size: .9rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Pinterest tips */
+    .pinterest-tips {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .pinterest-tip {
+      background: var(--dark-2);
+      border: 1px solid rgba(201,168,76,.15);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+    .pinterest-tip h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--cream);
+      font-size: 1rem;
+      margin: 0 0 .5rem;
+    }
+    .pinterest-tip p {
+      color: var(--text-muted);
+      font-size: .9rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--cream);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      margin: 0 0 .5rem;
+    }
+    .section-sub {
+      color: var(--text-muted);
+      font-size: .95rem;
+      line-height: 1.6;
+      margin: 0 0 2rem;
+    }
+    .cta-box {
+      background: var(--dark-2);
+      border: 1px solid rgba(201,168,76,.2);
+      border-radius: 8px;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .cta-box h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--cream);
+      font-size: 1.6rem;
+      margin: 0 0 .75rem;
+    }
+    .cta-box p {
+      color: var(--text-muted);
+      margin: 0 0 1.5rem;
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body style="background:var(--dark);color:var(--cream);font-family:'DM Sans',sans-serif;margin:0">
+
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem">
+      <a href="/" style="font-family:'Playfair Display',serif;font-style:italic;color:var(--gold);text-decoration:none;font-size:1.3rem">MoneyAffirmations.co</a>
+      <nav style="display:flex;gap:1.5rem;flex-wrap:wrap">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/money-affirmations/" class="nav-link">Money Affirmations</a>
+        <a href="/abundance-affirmations/" class="nav-link">Abundance</a>
+        <a href="/wealth-affirmations/" class="nav-link">Wealth</a>
+        <a href="/manifestation-affirmations/" class="nav-link">Manifestation</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-page">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Home</a> › Wallpapers</p>
+      <h1>Free Money Affirmation Wallpapers</h1>
+      <p class="sub">Download beautiful affirmation wallpapers for your phone and desktop — completely free. Each design is crafted at 1080×1920 to look stunning on any screen. New wallpaper added daily to keep your mindset fresh.</p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section" style="background:var(--dark)">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Three simple steps to your daily affirmation wallpaper.</p>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Choose Your Affirmation</h3>
+          <p>Browse the gallery below and find the affirmation that resonates most with your money goals today.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Preview the Design</h3>
+          <p>See exactly how your wallpaper will look — dark background, gold accents, and elegant Playfair Display typography.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Download Free PNG</h3>
+          <p>Click the download button and instantly receive a print-quality 1080×1920 PNG — no sign-up required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wallpaper Gallery -->
+  <section class="section" style="background:var(--dark-2)">
+    <div class="container">
+      <h2 class="section-title">Wallpaper Gallery</h2>
+      <p class="section-sub">Click any download button to save a full-resolution 1080×1920 PNG to your device.</p>
+      <div class="wallpaper-gallery">
+
+        <div class="wallpaper-tile">
+          <div class="wallpaper-preview">
+            <p>"I am a magnet for money and financial abundance."</p>
+            <span class="watermark">moneyaffirmations.co</span>
+          </div>
+          <button class="dl-btn" onclick="generateWallpaper('I am a magnet for money and financial abundance.')">&#11015; Download</button>
+        </div>
+
+        <div class="wallpaper-tile">
+          <div class="wallpaper-preview">
+            <p>"Money flows to me easily and effortlessly."</p>
+            <span class="watermark">moneyaffirmations.co</span>
+          </div>
+          <button class="dl-btn" onclick="generateWallpaper('Money flows to me easily and effortlessly.')">&#11015; Download</button>
+        </div>
+
+        <div class="wallpaper-tile">
+          <div class="wallpaper-preview">
+            <p>"I deserve to be wealthy and financially free."</p>
+            <span class="watermark">moneyaffirmations.co</span>
+          </div>
+          <button class="dl-btn" onclick="generateWallpaper('I deserve to be wealthy and financially free.')">&#11015; Download</button>
+        </div>
+
+        <div class="wallpaper-tile">
+          <div class="wallpaper-preview">
+            <p>"Prosperity is my natural state of being."</p>
+            <span class="watermark">moneyaffirmations.co</span>
+          </div>
+          <button class="dl-btn" onclick="generateWallpaper('Prosperity is my natural state of being.')">&#11015; Download</button>
+        </div>
+
+        <div class="wallpaper-tile">
+          <div class="wallpaper-preview">
+            <p>"I attract lucrative opportunities with ease."</p>
+            <span class="watermark">moneyaffirmations.co</span>
+          </div>
+          <button class="dl-btn" onclick="generateWallpaper('I attract lucrative opportunities with ease.')">&#11015; Download</button>
+        </div>
+
+        <div class="wallpaper-tile">
+          <div class="wallpaper-preview">
+            <p>"My income increases every month."</p>
+            <span class="watermark">moneyaffirmations.co</span>
+          </div>
+          <button class="dl-btn" onclick="generateWallpaper('My income increases every month.')">&#11015; Download</button>
+        </div>
+
+        <div class="wallpaper-tile">
+          <div class="wallpaper-preview">
+            <p>"Financial freedom is my birthright."</p>
+            <span class="watermark">moneyaffirmations.co</span>
+          </div>
+          <button class="dl-btn" onclick="generateWallpaper('Financial freedom is my birthright.')">&#11015; Download</button>
+        </div>
+
+        <div class="wallpaper-tile">
+          <div class="wallpaper-preview">
+            <p>"Abundance surrounds me wherever I go."</p>
+            <span class="watermark">moneyaffirmations.co</span>
+          </div>
+          <button class="dl-btn" onclick="generateWallpaper('Abundance surrounds me wherever I go.')">&#11015; Download</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pinterest Section -->
+  <section class="section" style="background:var(--dark)">
+    <div class="container">
+      <h2 class="section-title">Perfect for Pinterest</h2>
+      <p class="section-sub">These wallpapers are designed at the ideal Pinterest ratio — share your affirmations and inspire others on their wealth journey.</p>
+      <div class="pinterest-tips">
+        <div class="pinterest-tip">
+          <h3>Upload as an Idea Pin</h3>
+          <p>Pinterest Idea Pins love the 1080×1920 format. Upload your wallpaper directly as an Idea Pin for maximum reach and engagement on the platform.</p>
+        </div>
+        <div class="pinterest-tip">
+          <h3>Use Keyword Descriptions</h3>
+          <p>When pinning, include rich keyword descriptions like "money affirmations wallpaper," "abundance wallpaper iPhone," and "financial freedom phone background" to help people find your pin.</p>
+        </div>
+        <div class="pinterest-tip">
+          <h3>Pin to a Money Affirmations Board</h3>
+          <p>Create a dedicated "Money Affirmations" board and save all your downloads there. Themed boards perform exceptionally well in Pinterest search and attract like-minded followers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background:var(--dark-2)">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Get Today's Daily Affirmation</h2>
+        <p>We publish a fresh affirmation every single day on our homepage. Visit now to read your daily money affirmation and set a powerful intention for the day ahead.</p>
+        <a href="/" class="btn-gold">See Today's Affirmation</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><a href="/">Home</a> · <a href="/money-affirmations/">Money Affirmations</a> · <a href="/abundance-affirmations/">Abundance</a> · <a href="/wealth-affirmations/">Wealth</a> · <a href="/manifestation-affirmations/">Manifestation</a> · <a href="/prosperity-affirmations/">Prosperity</a> · <a href="/blog/">Blog</a> · <a href="/affirmation-cards/">Card Deck</a> · <a href="/wallpapers/">Wallpapers</a></p>
+      <p style="margin-top:1rem">© 2026 MoneyAffirmations.co · All rights reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    function generateWallpaper(text) {
+      const canvas = document.createElement('canvas');
+      canvas.width = 1080;
+      canvas.height = 1920;
+      const ctx = canvas.getContext('2d');
+
+      // Background
+      ctx.fillStyle = '#0D0C0A';
+      ctx.fillRect(0, 0, 1080, 1920);
+
+      // Gold horizontal lines
+      ctx.strokeStyle = '#C9A84C';
+      ctx.lineWidth = 2;
+
+      ctx.beginPath();
+      ctx.moveTo(80, 120);
+      ctx.lineTo(1000, 120);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(80, 1800);
+      ctx.lineTo(1000, 1800);
+      ctx.stroke();
+
+      // Watermark
+      ctx.fillStyle = '#C9A84C';
+      ctx.font = '32px "DM Sans", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('moneyaffirmations.co', 540, 1870);
+
+      // Affirmation text — word-wrapped, centered
+      ctx.fillStyle = '#F8F2E4';
+      ctx.font = 'italic 72px "Playfair Display", Georgia, serif';
+      ctx.textAlign = 'center';
+
+      const maxWidth = 900;
+      const lineHeight = 96;
+      const words = text.split(' ');
+      const lines = [];
+      let currentLine = '';
+
+      for (let i = 0; i < words.length; i++) {
+        const testLine = currentLine ? currentLine + ' ' + words[i] : words[i];
+        const metrics = ctx.measureText(testLine);
+        if (metrics.width > maxWidth && currentLine) {
+          lines.push(currentLine);
+          currentLine = words[i];
+        } else {
+          currentLine = testLine;
+        }
+      }
+      if (currentLine) lines.push(currentLine);
+
+      const totalHeight = lines.length * lineHeight;
+      let startY = 960 - totalHeight / 2 + lineHeight / 2;
+
+      // Decorative quote mark
+      ctx.fillStyle = 'rgba(201,168,76,0.3)';
+      ctx.font = 'italic 200px "Playfair Display", Georgia, serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('\u201C', 540, startY - 60);
+
+      ctx.fillStyle = '#F8F2E4';
+      ctx.font = 'italic 72px "Playfair Display", Georgia, serif';
+      ctx.textAlign = 'center';
+
+      lines.forEach((line, i) => {
+        ctx.fillText(line, 540, startY + i * lineHeight);
+      });
+
+      // Trigger download
+      const link = document.createElement('a');
+      const slug = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
+      link.download = 'money-affirmation-wallpaper-' + slug + '.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+</body>
+</html>

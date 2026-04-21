@@ -1,0 +1,196 @@
+name: Publish Scheduled Posts
+
+on:
+  schedule:
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Publish due posts
+        id: publish_posts
+        run: |
+          node << 'EOF'
+          const fs   = require('fs');
+          const path = require('path');
+
+          // ── helpers ────────────────────────────────────────────────────────
+          function getTodayStr() {
+            return new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+          }
+
+          function parsePublishDate(html) {
+            const m = html.match(/<meta\s+name=["']publish-date["']\s+content=["'](\d{4}-\d{2}-\d{2})["']/i);
+            return m ? m[1] : null;
+          }
+
+          function isAlreadyPublished(html) {
+            return /data-published=["']true["']/.test(html);
+          }
+
+          function markBodyPublished(html) {
+            // Add data-published="true" to the opening <body> tag
+            return html.replace(/<body([^>]*)>/, (match, attrs) => {
+              if (/data-published/.test(attrs)) return match;
+              return `<body${attrs} data-published="true">`;
+            });
+          }
+
+          function extractTitle(html) {
+            const ogTitle = html.match(/<meta\s+property=["']og:title["']\s+content=["']([^"']+)["']/i);
+            if (ogTitle) return ogTitle[1].trim();
+            const titleTag = html.match(/<title>([^<]+)<\/title>/i);
+            if (titleTag) return titleTag[1].replace(/\s*\|.*$/, '').trim();
+            const h1 = html.match(/<h1[^>]*>([^<]+)<\/h1>/i);
+            if (h1) return h1[1].trim();
+            return 'Untitled Post';
+          }
+
+          function extractExcerpt(html) {
+            const metaDesc = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i);
+            if (metaDesc) return metaDesc[1].trim();
+            return '';
+          }
+
+          function slugFromPath(filePath) {
+            // blog/<slug>/index.html  →  /blog/<slug>/
+            const parts = filePath.split(path.sep);
+            const blogIdx = parts.lastIndexOf('blog');
+            if (blogIdx !== -1 && parts.length > blogIdx + 2) {
+              return `/blog/${parts[blogIdx + 1]}/`;
+            }
+            return null;
+          }
+
+          function buildBlogCard(title, excerpt, slug) {
+            const escapedTitle   = title.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            const escapedExcerpt = excerpt.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return [
+              `    <article class="blog-card">`,
+              `      <h2>${escapedTitle}</h2>`,
+              excerpt ? `      <p>${escapedExcerpt}</p>` : '',
+              `      <a href="${slug}">Read More &rarr;</a>`,
+              `    </article>`,
+            ].filter(Boolean).join('\n');
+          }
+
+          function buildSitemapEntry(url) {
+            const today = getTodayStr();
+            return [
+              '  <url>',
+              `    <loc>https://moneyaffirmations.co${url}</loc>`,
+              `    <lastmod>${today}</lastmod>`,
+              '    <changefreq>weekly</changefreq>',
+              '    <priority>0.7</priority>',
+              '  </url>',
+            ].join('\n');
+          }
+
+          // ── find all blog post index.html files ────────────────────────────
+          function findBlogPosts(baseDir) {
+            const results = [];
+            const blogDir = path.join(baseDir, 'blog');
+            if (!fs.existsSync(blogDir)) return results;
+
+            for (const entry of fs.readdirSync(blogDir, { withFileTypes: true })) {
+              if (!entry.isDirectory()) continue;
+              const candidate = path.join(blogDir, entry.name, 'index.html');
+              if (fs.existsSync(candidate)) results.push(candidate);
+            }
+            return results;
+          }
+
+          // ── main ───────────────────────────────────────────────────────────
+          const baseDir    = process.env.GITHUB_WORKSPACE || process.cwd();
+          const today      = getTodayStr();
+          const blogIndex  = path.join(baseDir, 'blog', 'index.html');
+          const sitemapXml = path.join(baseDir, 'sitemap.xml');
+
+          const posts = findBlogPosts(baseDir);
+          let publishedCount = 0;
+
+          let blogIndexHtml  = fs.existsSync(blogIndex)  ? fs.readFileSync(blogIndex,  'utf8') : null;
+          let sitemapContent = fs.existsSync(sitemapXml) ? fs.readFileSync(sitemapXml, 'utf8') : null;
+
+          for (const postPath of posts) {
+            let html = fs.readFileSync(postPath, 'utf8');
+
+            const publishDate = parsePublishDate(html);
+            if (!publishDate) continue;                       // no publish-date meta
+            if (publishDate > today) continue;                // not yet due
+            if (isAlreadyPublished(html)) continue;           // already live
+
+            console.log(`Publishing: ${postPath} (publish-date: ${publishDate})`);
+
+            // 1. Mark the post file
+            html = markBodyPublished(html);
+            fs.writeFileSync(postPath, html, 'utf8');
+
+            const title   = extractTitle(html);
+            const excerpt = extractExcerpt(html);
+            const slug    = slugFromPath(postPath);
+
+            // 2. Append blog card to blog/index.html
+            if (blogIndexHtml !== null && slug) {
+              const card = buildBlogCard(title, excerpt, slug);
+              if (blogIndexHtml.includes('id="blog-posts-list"')) {
+                // Insert before the closing tag of #blog-posts-list
+                blogIndexHtml = blogIndexHtml.replace(
+                  /(<div[^>]+id=["']blog-posts-list["'][^>]*>)([\s\S]*?)(<\/div>)/,
+                  (match, open, inner, close) => `${open}${inner}\n${card}\n  ${close}`
+                );
+              } else {
+                console.warn('blog/index.html: could not find #blog-posts-list — skipping card injection');
+              }
+            }
+
+            // 3. Append URL to sitemap.xml
+            if (sitemapContent !== null && slug) {
+              // Check it's not already in the sitemap
+              if (!sitemapContent.includes(slug)) {
+                const entry = buildSitemapEntry(slug);
+                sitemapContent = sitemapContent.replace('</urlset>', `${entry}\n</urlset>`);
+              }
+            }
+
+            publishedCount++;
+          }
+
+          // ── write changed files back ───────────────────────────────────────
+          if (publishedCount > 0) {
+            if (blogIndexHtml  !== null) fs.writeFileSync(blogIndex,  blogIndexHtml,  'utf8');
+            if (sitemapContent !== null) fs.writeFileSync(sitemapXml, sitemapContent, 'utf8');
+            console.log(`Done. Published ${publishedCount} post(s).`);
+          } else {
+            console.log('No posts due for publishing today.');
+          }
+          EOF
+
+      - name: Detect changes
+        id: check_changes
+        run: git diff --quiet || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push published posts
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish scheduled posts [skip ci]"
+          git push

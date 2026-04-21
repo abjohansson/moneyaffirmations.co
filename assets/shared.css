@@ -1,0 +1,651 @@
+/* ============================================================
+   MoneyAffirmations.co — Shared Stylesheet
+   ============================================================ */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* ============================================================
+   CSS Custom Properties
+   ============================================================ */
+:root {
+  --gold:        #C9A84C;
+  --gold-light:  #E8C97A;
+  --dark:        #0D0C0A;
+  --dark-2:      #1A1813;
+  --cream:       #F8F2E4;
+  --text-muted:  #8A8070;
+}
+
+/* ============================================================
+   CSS Reset & Box-Sizing
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* ============================================================
+   Base / Body
+   ============================================================ */
+body {
+  background-color: var(--dark);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ============================================================
+   Site Header
+   ============================================================ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--dark);
+  border-bottom: 1px solid var(--gold);
+  padding: 0 1.5rem;
+}
+
+.site-header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 64px;
+}
+
+.site-header .logo {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.site-header .logo:hover {
+  color: var(--gold-light);
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.site-header nav a {
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.site-header nav a:hover {
+  color: var(--gold);
+}
+
+/* ============================================================
+   Hero Section
+   ============================================================ */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 1.5rem 4rem;
+  background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.08) 0%, transparent 70%),
+              var(--dark);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   Affirmation Card
+   ============================================================ */
+.affirmation-card {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  line-height: 1.6;
+  color: var(--gold);
+  text-align: center;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-gold {
+  background-color: var(--gold);
+  color: var(--dark);
+  border-color: var(--gold);
+}
+
+.btn-gold:hover {
+  background-color: var(--gold-light);
+  border-color: var(--gold-light);
+  color: var(--dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+}
+
+.btn-outline:hover {
+  background-color: rgba(201, 168, 76, 0.1);
+  color: var(--gold-light);
+  border-color: var(--gold-light);
+}
+
+/* ============================================================
+   Layout Primitives
+   ============================================================ */
+.section {
+  padding: 5rem 1.5rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   Card Grid
+   ============================================================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ============================================================
+   Content Card
+   ============================================================ */
+.content-card {
+  background-color: var(--dark-2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  transition: border-color 0.25s ease;
+}
+
+.content-card:hover {
+  border-color: var(--gold);
+}
+
+/* ============================================================
+   Affirmation List (auto-numbered)
+   ============================================================ */
+.affirmation-list {
+  counter-reset: affirmation-count;
+  list-style: none;
+  padding-left: 0;
+}
+
+.affirmation-list li {
+  counter-increment: affirmation-count;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.affirmation-list li::before {
+  content: counter(affirmation-count) ". ";
+  color: var(--gold);
+  font-weight: 600;
+  position: absolute;
+  left: 0;
+}
+
+/* ============================================================
+   Badge
+   ============================================================ */
+.badge {
+  display: inline-block;
+  background-color: rgba(201, 168, 76, 0.15);
+  color: var(--gold);
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ============================================================
+   Page Hero (interior pages)
+   ============================================================ */
+.page-hero {
+  padding: 7rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.page-hero .subtitle {
+  color: var(--text-muted);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   Breadcrumb
+   ============================================================ */
+.breadcrumb {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--gold-light);
+}
+
+.breadcrumb span {
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   Blog / Post Content (prose)
+   ============================================================ */
+.post-content p,
+.post-content li {
+  line-height: 1.8;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+
+.post-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--gold);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  line-height: 1.3;
+}
+
+.post-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--cream);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+  line-height: 1.4;
+}
+
+.post-content ol,
+.post-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-content ul {
+  list-style: disc;
+}
+
+.post-content ol {
+  list-style: decimal;
+}
+
+.post-content ol li,
+.post-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.post-content strong {
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.post-content em {
+  font-style: italic;
+}
+
+.post-content blockquote {
+  border-left: 3px solid var(--gold);
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  background-color: rgba(201, 168, 76, 0.05);
+  border-radius: 0 4px 4px 0;
+}
+
+.post-content blockquote p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--gold-light);
+  margin-bottom: 0;
+}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.5rem 0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item details summary {
+  cursor: pointer;
+  color: var(--gold);
+  font-weight: 600;
+  list-style: none;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color 0.2s ease;
+}
+
+.faq-item details summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item details summary::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--gold);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-item details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item details summary:hover {
+  color: var(--gold-light);
+}
+
+.faq-item details p {
+  color: var(--cream);
+  margin-top: 1rem;
+  line-height: 1.8;
+}
+
+/* ============================================================
+   Site Footer
+   ============================================================ */
+.site-footer {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid rgba(201, 168, 76, 0.2);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-footer a:hover {
+  color: var(--gold-light);
+}
+
+.site-footer p + p {
+  margin-top: 0.5rem;
+}
+
+/* ============================================================
+   Blog Grid & Cards
+   ============================================================ */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.blog-card {
+  background-color: var(--dark-2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s ease;
+}
+
+.blog-card:hover {
+  border-color: var(--gold);
+}
+
+.blog-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.blog-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.blog-card a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.blog-card a:hover {
+  color: var(--gold-light);
+}
+
+/* ============================================================
+   Tag Group
+   ============================================================ */
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+/* ============================================================
+   Affirmation Group
+   ============================================================ */
+.affirmation-group {
+  margin-bottom: 3rem;
+}
+
+.affirmation-group h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+/* ============================================================
+   Utility Classes
+   ============================================================ */
+.text-gold    { color: var(--gold); }
+.text-muted   { color: var(--text-muted); }
+.text-center  { text-align: center; }
+.mt-2         { margin-top: 2rem; }
+.mb-2         { margin-bottom: 2rem; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+.italic        { font-style: italic; }
+
+/* ============================================================
+   Responsive — Mobile ≤768px
+   ============================================================ */
+@media (max-width: 768px) {
+  .site-header .header-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.75rem 0;
+    gap: 0.5rem;
+  }
+
+  .site-header nav {
+    gap: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .hero {
+    padding: 5rem 1.25rem 3rem;
+  }
+
+  .section {
+    padding: 3rem 1.25rem;
+  }
+
+  .page-hero {
+    padding: 5.5rem 1.25rem 2rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .affirmation-card {
+    padding: 1.25rem;
+  }
+
+  .btn {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header nav {
+    gap: 0.75rem;
+  }
+
+  .site-header nav a {
+    font-size: 0.85rem;
+  }
+}
