@@ -88,6 +88,13 @@ blog/affirmations-for-career-growth/index.html
 6. H2: Tips to make them work faster — 3–5 bullets
 7. H2: FAQ — 3 x <details><summary> items
 8. Closing paragraph linking to parent collection
+9. Author box — REQUIRED, place immediately before </article>:
+```html
+  <div class="author-box" style="margin-top:3rem;padding:1.25rem 1.5rem;border:1px solid rgba(201,168,76,.2);border-radius:8px">
+    <p style="margin:0 0 .35rem;font-weight:600;color:#F8F2E4;font-size:.95rem">MoneyAffirmations.co</p>
+    <p style="margin:0;font-size:.875rem;color:#8A8070;line-height:1.7">A resource dedicated to helping people build a healthier relationship with money through daily mindset practice, science-backed affirmations, and practical financial confidence tools.</p>
+  </div>
+```
 
 ## Featured image — every blog post MUST have one
 - File: `/blog/[slug]/card.svg` — generated SVG, 1200×630 viewBox
