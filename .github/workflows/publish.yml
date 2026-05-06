@@ -46,10 +46,16 @@ jobs:
 
           function markBodyPublished(html) {
             // Add data-published="true" to the opening <body> tag
-            return html.replace(/<body([^>]*)>/, (match, attrs) => {
+            html = html.replace(/<body([^>]*)>/, (match, attrs) => {
               if (/data-published/.test(attrs)) return match;
               return `<body${attrs} data-published="true">`;
             });
+            // Swap visible date line from "Scheduled for X · 07:00 UTC" → "Published X"
+            html = html.replace(
+              /Scheduled for ([\w]+ \d+, \d{4}) · 07:00 UTC/,
+              'Published $1'
+            );
+            return html;
           }
 
           function extractTitle(html) {

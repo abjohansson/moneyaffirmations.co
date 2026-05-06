@@ -77,7 +77,11 @@ blog/affirmations-for-career-growth/index.html
 
 ## Blog post structure (follow exactly)
 1. H1 — exact/close keyword match
-2. Intro 120–150 words
+2. Visible date line immediately after H1 — use exact format:
+   - Scheduled post: `<p class="post-meta" style="color:#8A8070;font-size:.85rem;margin-top:-.75rem;margin-bottom:1.75rem">Scheduled for [Month D, YYYY] · 07:00 UTC</p>`
+   - Already-live post: `<p class="post-meta" style="color:#8A8070;font-size:.85rem;margin-top:-.75rem;margin-bottom:1.75rem">Published [Month D, YYYY]</p>`
+   - GitHub Action auto-swaps "Scheduled for…" → "Published…" on publish day
+3. Intro 120–150 words
 3. H2: What are [topic] affirmations? — 100–150 words
 4. H2: [N] [topic] affirmations — full numbered list (ol.affirmation-list)
 5. H2: How to use these affirmations — 150–200 words
