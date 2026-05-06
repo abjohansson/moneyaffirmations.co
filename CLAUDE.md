@@ -85,6 +85,56 @@ blog/affirmations-for-career-growth/index.html
 7. H2: FAQ — 3 x <details><summary> items
 8. Closing paragraph linking to parent collection
 
+## Required <head> tags on every blog post — NEVER OMIT
+Every blog post must include ALL of the following in <head>, filled in correctly:
+
+```html
+<meta name="publish-date" content="YYYY-MM-DD">
+<meta name="description" content="[150 chars max]">
+<link rel="canonical" href="https://moneyaffirmations.co/blog/[slug]/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Full post title]">
+<meta property="og:description" content="[Same as meta description]">
+<meta property="og:url" content="https://moneyaffirmations.co/blog/[slug]/">
+<meta property="og:site_name" content="MoneyAffirmations.co">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[Full post title]">
+<meta name="twitter:description" content="[Same as meta description]">
+
+<!-- JSON-LD: Article schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "[Post title without site name]",
+  "description": "[Same as meta description]",
+  "url": "https://moneyaffirmations.co/blog/[slug]/",
+  "datePublished": "YYYY-MM-DD",
+  "dateModified": "YYYY-MM-DD",
+  "author": { "@type": "Organization", "name": "MoneyAffirmations.co", "url": "https://moneyaffirmations.co" },
+  "publisher": { "@type": "Organization", "name": "MoneyAffirmations.co", "url": "https://moneyaffirmations.co" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://moneyaffirmations.co/blog/[slug]/" }
+}
+</script>
+
+<!-- JSON-LD: FAQPage schema — fill in from actual FAQ <details> items -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "[FAQ question 1]", "acceptedAnswer": { "@type": "Answer", "text": "[Answer 1]" } },
+    { "@type": "Question", "name": "[FAQ question 2]", "acceptedAnswer": { "@type": "Answer", "text": "[Answer 2]" } },
+    { "@type": "Question", "name": "[FAQ question 3]", "acceptedAnswer": { "@type": "Answer", "text": "[Answer 3]" } }
+  ]
+}
+</script>
+```
+
 ## Internal linking rules
 - Money posts → /money-affirmations/
 - Abundance/morning/LOA posts → /abundance-affirmations/ or /manifestation-affirmations/
@@ -110,16 +160,36 @@ GitHub Action runs 7am UTC daily, marks posts published, updates blog/index.html
 - morning affirmations for abundance (500/mo)
 
 ## Next blog posts to write (priority order)
-1. Monday Affirmations
-2. Friday Affirmations
-3. The Secret Money Affirmations
-4. Money Mindset
-5. Tuesday Affirmations
-6. Thursday Affirmations
-7. Sleep Affirmations for Wealth
-8. Gratitude Affirmations
-9. Business Affirmations
-10. Money Comes to Me Easily
+1. Gratitude Affirmations
+2. Business Affirmations
+3. Wednesday Affirmations
+4. Weekend Affirmations
+5. Positive Affirmations for Money
+6. Affirmations for Debt-Free Living
+7. Abundance Mindset Affirmations
+8. Affirmations for Receiving Money
+
+## Published scheduled posts (already in repo)
+- monday-affirmations-for-money — 2026-04-28 ✅ published
+- friday-affirmations-for-money — 2026-04-30
+- sleep-affirmations-for-wealth — 2026-05-02
+- the-secret-money-affirmations — 2026-05-04
+- money-mindset — 2026-05-06
+- tuesday-affirmations — 2026-05-08
+- thursday-affirmations — 2026-05-10
+- manifesting-affirmations-for-money — 2026-05-12
+- money-comes-to-me-easily — 2026-05-14
+- i-am-wealthy-affirmation — 2026-05-16
+
+## SEO checklist — verify before every commit
+- [ ] meta description present
+- [ ] canonical URL correct
+- [ ] og:title, og:description, og:type, og:url, og:site_name present
+- [ ] twitter:card, twitter:title, twitter:description present
+- [ ] Article JSON-LD with correct datePublished
+- [ ] FAQPage JSON-LD matching actual FAQ items in post
+- [ ] publish-date meta set
+- [ ] data-published="true" on body (for already-live posts only)
 
 ## How to add a new blog post
 1. Create /blog/[slug]/index.html following the blog post structure above
