@@ -160,7 +160,7 @@ Each blog post has: <meta name="publish-date" content="YYYY-MM-DD">
 GitHub Action runs 7am UTC daily, marks posts published, updates blog/index.html and sitemap.xml.
 
 ## Revenue
-1. Google AdSense (primary — GA4 ID: TBD)
+1. Google AdSense (primary — GA4 ID: G-45V37Y4KCX)
 2. Affiliates: YNAB, Acorns, Coinbase, money mindset books
 3. Gumroad card deck: $9 → https://gumroad.com/l/money-affirmation-cards
 4. Pinterest traffic via canvas story generator on homepage
