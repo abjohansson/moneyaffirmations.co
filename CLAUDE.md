@@ -89,6 +89,15 @@ blog/affirmations-for-career-growth/index.html
 7. H2: FAQ — 3 x <details><summary> items
 8. Closing paragraph linking to parent collection
 
+## Featured image — every blog post MUST have one
+- File: `/blog/[slug]/card.svg` — generated SVG, 1200×630 viewBox
+- Placed in HTML immediately after the post-meta date line
+- `<img src="card.svg" alt="[Post title] affirmation card" width="100%" style="border-radius:8px;margin-bottom:2rem">` — no fixed height, scales to all screens
+- og:image and twitter:image must reference the absolute URL: `https://moneyaffirmations.co/blog/[slug]/card.svg`
+- Alt text: "[Post title] affirmation card" — keyword included naturally
+- Design: dark bg (#0D0C0A), gold border frame (#C9A84C), cream title text (#F8F2E4), gold MoneyAffirmations.co branding
+- When writing new posts: generate card.svg using the same script pattern (node add-images.js) or replicate the SVG template manually
+
 ## Required <head> tags on every blog post — NEVER OMIT
 Every blog post must include ALL of the following in <head>, filled in correctly:
 
