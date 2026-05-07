@@ -4,6 +4,7 @@
 Static HTML site at moneyaffirmations.co targeting $2k/month AdSense by Nov 2026.
 GitHub repo: https://github.com/abjohansson/moneyaffirmations.co
 Hosted on GitHub Pages, custom domain connected.
+Contact email: hello@moneyaffirmations.co
 
 ## Tech stack
 - Pure static HTML/CSS/JS — no framework, no CMS, no backend
@@ -25,7 +26,7 @@ Hosted on GitHub Pages, custom domain connected.
 - /favicon.ico at root — auto-served by browsers, no HTML tags needed
 - /assets/apple-touch-icon.png — 180x180 for iOS
 
-## Site structure (35 files)
+## Site structure
 ```
 index.html                          homepage (daily affirmation + canvas story generator)
 404.html
@@ -37,6 +38,12 @@ assets/shared.css
 assets/favicon.svg
 assets/apple-touch-icon.png
 .github/workflows/publish.yml
+
+about/index.html
+contact/index.html
+privacy-policy/index.html
+terms/index.html
+sitemap/index.html                  HTML sitemap page
 
 money-affirmations/index.html       100 affirmations, 5 groups
 abundance-affirmations/index.html   80 affirmations, 4 groups
@@ -68,6 +75,19 @@ blog/money-affirmations-for-women/index.html
 blog/affirmations-for-investing/index.html
 blog/affirmations-for-sales-confidence/index.html
 blog/affirmations-for-career-growth/index.html
+blog/monday-affirmations-for-money/index.html
+blog/friday-affirmations-for-money/index.html
+blog/sleep-affirmations-for-wealth/index.html
+blog/the-secret-money-affirmations/index.html
+blog/money-mindset/index.html
+blog/tuesday-affirmations/index.html
+blog/thursday-affirmations/index.html
+blog/manifesting-affirmations-for-money/index.html
+blog/money-comes-to-me-easily/index.html
+blog/i-am-wealthy-affirmation/index.html
+blog/money-and-abundance-affirmations/index.html
+blog/prosperity-affirmations/index.html
+blog/powerful-money-affirmations/index.html
 ```
 
 ## Language rules — CRITICAL
@@ -75,20 +95,33 @@ blog/affirmations-for-career-growth/index.html
 - NEVER show dataset IDs in affirmation cards — CSS counter only
 - All affirmations: first person, present tense, positive
 
+## Footer structure — every page must have this exact two-row footer
+```html
+<footer class="site-footer">
+  <div class="container">
+    <p><a href="/">Home</a> · <a href="/money-affirmations/">Money Affirmations</a> · <a href="/abundance-affirmations/">Abundance</a> · <a href="/wealth-affirmations/">Wealth</a> · <a href="/blog/">Blog</a> · <a href="/affirmation-cards/">Card Deck</a></p>
+    <p style="margin-top:.75rem"><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms/">Terms</a> · <a href="/sitemap/">Sitemap</a></p>
+    <p style="margin-top:1rem">© 2026 MoneyAffirmations.co</p>
+  </div>
+</footer>
+```
+
 ## Blog post structure (follow exactly)
 1. H1 — exact/close keyword match
 2. Visible date line immediately after H1 — use exact format:
    - Scheduled post: `<p class="post-meta" style="color:#8A8070;font-size:.85rem;margin-top:-.75rem;margin-bottom:1.75rem">Scheduled for [Month D, YYYY] · 07:00 UTC</p>`
    - Already-live post: `<p class="post-meta" style="color:#8A8070;font-size:.85rem;margin-top:-.75rem;margin-bottom:1.75rem">Published [Month D, YYYY]</p>`
    - GitHub Action auto-swaps "Scheduled for…" → "Published…" on publish day
-3. Intro 120–150 words
-3. H2: What are [topic] affirmations? — 100–150 words
-4. H2: [N] [topic] affirmations — full numbered list (ol.affirmation-list)
-5. H2: How to use these affirmations — 150–200 words
-6. H2: Tips to make them work faster — 3–5 bullets
-7. H2: FAQ — 3 x <details><summary> items
-8. Closing paragraph linking to parent collection
-9. Author box — REQUIRED, place immediately before </article>:
+3. Featured image (card.svg) — immediately after date line
+4. Intro 120–150 words
+5. H2: What are [topic] affirmations? — 100–150 words
+6. H2: [N] [topic] affirmations — full numbered list (ol.affirmation-list)
+7. H2: How to use these affirmations — 150–200 words
+8. H2: [Additional depth H2] — 180–220 words (neuroscience, psychology, why it works, etc.)
+9. H2: Tips to make them work faster — 5 bullets with bold lead words
+10. H2: FAQ — 3 x <details><summary> items
+11. Closing paragraph linking to parent collection
+12. Author box — REQUIRED, place immediately before </article>:
 ```html
   <div class="author-box" style="margin-top:3rem;padding:1.25rem 1.5rem;border:1px solid rgba(201,168,76,.2);border-radius:8px">
     <p style="margin:0 0 .35rem;font-weight:600;color:#F8F2E4;font-size:.95rem">MoneyAffirmations.co</p>
@@ -97,21 +130,35 @@ blog/affirmations-for-career-growth/index.html
 ```
 
 ## Featured image — every blog post MUST have one
-- File: `/blog/[slug]/card.svg` — generated SVG, 1200×630 viewBox
+- File: `/blog/[slug]/card.svg` — SVG, 1200×630 viewBox
 - Placed in HTML immediately after the post-meta date line
-- `<img src="card.svg" alt="[Post title] affirmation card" width="100%" style="border-radius:8px;margin-bottom:2rem">` — no fixed height, scales to all screens
-- og:image and twitter:image must reference the absolute URL: `https://moneyaffirmations.co/blog/[slug]/card.svg`
-- Alt text: "[Post title] affirmation card" — keyword included naturally
-- Design: dark bg (#0D0C0A), gold border frame (#C9A84C), cream title text (#F8F2E4), gold MoneyAffirmations.co branding
-- When writing new posts: generate card.svg using the same script pattern (node add-images.js) or replicate the SVG template manually
+- `<img src="card.svg" alt="[Post title] affirmation card" width="100%" style="border-radius:8px;margin-bottom:2rem;display:block">` — no fixed height
+- og:image and twitter:image must use absolute URL: `https://moneyaffirmations.co/blog/[slug]/card.svg`
+- Design: dark bg (#0D0C0A), gold border frame (#C9A84C), cream title (#F8F2E4), gold italic branding
+- SVG template (adapt title text and line breaks per post):
+```svg
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0D0C0A"/>
+  <rect x="20" y="20" width="1160" height="590" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.5"/>
+  <polygon points="600,82 609,96 600,110 591,96" fill="#C9A84C" opacity="0.7"/>
+  <text x="600" y="[y1]" text-anchor="middle" fill="#F8F2E4" font-family="Georgia,'Times New Roman',serif" font-size="[size]" font-weight="600">[Title line 1]</text>
+  <text x="600" y="[y2]" text-anchor="middle" fill="#F8F2E4" font-family="Georgia,'Times New Roman',serif" font-size="[size]" font-weight="600">[Title line 2 if needed]</text>
+  <text x="600" y="575" text-anchor="middle" fill="#C9A84C" font-family="Georgia,'Times New Roman',serif" font-size="26" font-style="italic">MoneyAffirmations.co</text>
+</svg>
+```
+- Font size guide: 62px (≤35 chars), 54px (≤55 chars), 46px (≤75 chars), 40px (>75 chars)
+- For 2-line titles at 46px: y1=270, y2=335. For single line: y=315
 
 ## Required <head> tags on every blog post — NEVER OMIT
-Every blog post must include ALL of the following in <head>, filled in correctly:
+Every blog post must include ALL of the following in <head>, in this order:
 
 ```html
 <meta name="publish-date" content="YYYY-MM-DD">
 <meta name="description" content="[150 chars max]">
 <link rel="canonical" href="https://moneyaffirmations.co/blog/[slug]/">
+
+<!-- SCHEDULED posts only — remove this line on already-live posts -->
+<meta name="robots" content="noindex,nofollow">
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
@@ -119,11 +166,13 @@ Every blog post must include ALL of the following in <head>, filled in correctly
 <meta property="og:description" content="[Same as meta description]">
 <meta property="og:url" content="https://moneyaffirmations.co/blog/[slug]/">
 <meta property="og:site_name" content="MoneyAffirmations.co">
+<meta property="og:image" content="https://moneyaffirmations.co/blog/[slug]/card.svg">
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="[Full post title]">
 <meta name="twitter:description" content="[Same as meta description]">
+<meta name="twitter:image" content="https://moneyaffirmations.co/blog/[slug]/card.svg">
 
 <!-- JSON-LD: Article schema -->
 <script type="application/ld+json">
@@ -141,7 +190,7 @@ Every blog post must include ALL of the following in <head>, filled in correctly
 }
 </script>
 
-<!-- JSON-LD: FAQPage schema — fill in from actual FAQ <details> items -->
+<!-- JSON-LD: FAQPage schema — must match actual FAQ <details> items exactly -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -153,6 +202,15 @@ Every blog post must include ALL of the following in <head>, filled in correctly
   ]
 }
 </script>
+
+<!-- GA4 — always include on every page -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-45V37Y4KCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-45V37Y4KCX');
+</script>
 ```
 
 ## Internal linking rules
@@ -163,15 +221,25 @@ Every blog post must include ALL of the following in <head>, filled in correctly
 - Every collection page links back to its blog posts
 
 ## Scheduling system
-Each blog post has: <meta name="publish-date" content="YYYY-MM-DD">
-GitHub Action runs 7am UTC daily, marks posts published, updates blog/index.html and sitemap.xml.
+Each blog post has: `<meta name="publish-date" content="YYYY-MM-DD">`
+GitHub Action runs 07:00 UTC daily. On publish day it:
+1. Adds `data-published="true"` to `<body>`
+2. Swaps "Scheduled for X · 07:00 UTC" → "Published X" in visible date line
+3. Removes `<meta name="robots" content="noindex,nofollow">` from `<head>`
+4. Adds the blog card to blog/index.html
+5. Adds the URL to sitemap.xml
 
 ### CRITICAL scheduling rules — never break these:
 - NEVER manually add scheduled/future posts to blog/index.html — the Action does this on publish day
 - NEVER manually add scheduled/future posts to sitemap.xml — the Action does this on publish day
-- ALL unpublished posts MUST have `<meta name="robots" content="noindex,nofollow">` in <head>
+- ALL unpublished/scheduled posts MUST have `<meta name="robots" content="noindex,nofollow">` in <head>
 - Do NOT set `<body data-published="true">` on scheduled posts — only already-live posts get this
 - When committing a new scheduled post, only commit: the post's index.html and card.svg — nothing else
+- Schedule posts 2 days apart minimum — check existing schedule before assigning a date
+
+### After each post publishes:
+- Manually submit the URL in Google Search Console (URL Inspection → Request Indexing)
+- This gets it indexed same day vs waiting for Googlebot to discover it
 
 ## Revenue
 1. Google AdSense (primary — GA4 ID: G-45V37Y4KCX)
@@ -186,6 +254,44 @@ GitHub Action runs 7am UTC daily, marks posts published, updates blog/index.html
 - money affirmations that work instantly (5k/mo, comp 7)
 - morning affirmations for abundance (500/mo)
 
+## All blog posts — status and schedule
+### Published ✅
+- 10-money-affirmations-that-really-work — 2026-04-20
+- what-are-money-affirmations — 2026-04-20
+- how-to-use-money-affirmations — 2026-04-20
+- 30-day-money-affirmation-journal — 2026-04-20
+- daily-affirmations-for-money — 2026-04-20
+- i-am-a-money-magnet — 2026-04-20
+- money-affirmations-that-work-instantly — 2026-04-20
+- morning-affirmations-for-abundance — 2026-04-20
+- law-of-attraction-affirmations-for-money — 2026-04-20
+- financial-freedom-affirmations — 2026-04-20
+- 7-most-powerful-money-affirmations — 2026-04-20
+- louise-hay-abundance-affirmations — 2026-04-20
+- how-to-write-money-affirmations — 2026-04-20
+- bob-proctor-affirmations-for-money — 2026-04-20
+- affirmations-for-entrepreneurs — 2026-04-20
+- affirmations-for-freelancers — 2026-04-20
+- money-affirmations-for-women — 2026-04-20
+- affirmations-for-investing — 2026-04-20
+- affirmations-for-sales-confidence — 2026-04-20
+- affirmations-for-career-growth — 2026-04-20
+- monday-affirmations-for-money — 2026-04-28
+- friday-affirmations-for-money — 2026-04-30
+- sleep-affirmations-for-wealth — 2026-05-02
+- the-secret-money-affirmations — 2026-05-04
+- money-mindset — 2026-05-06
+
+### Scheduled 🕐 (noindex, not in blog index or sitemap yet)
+- tuesday-affirmations — 2026-05-08
+- money-and-abundance-affirmations — 2026-05-09
+- thursday-affirmations — 2026-05-10
+- prosperity-affirmations — 2026-05-11
+- manifesting-affirmations-for-money — 2026-05-12
+- powerful-money-affirmations — 2026-05-13
+- money-comes-to-me-easily — 2026-05-14
+- i-am-wealthy-affirmation — 2026-05-16
+
 ## Next blog posts to write (priority order)
 1. Gratitude Affirmations
 2. Business Affirmations
@@ -195,38 +301,38 @@ GitHub Action runs 7am UTC daily, marks posts published, updates blog/index.html
 6. Affirmations for Debt-Free Living
 7. Abundance Mindset Affirmations
 8. Affirmations for Receiving Money
-
-## Published scheduled posts (already in repo)
-- monday-affirmations-for-money — 2026-04-28 ✅ published
-- friday-affirmations-for-money — 2026-04-30
-- sleep-affirmations-for-wealth — 2026-05-02
-- the-secret-money-affirmations — 2026-05-04
-- money-mindset — 2026-05-06
-- tuesday-affirmations — 2026-05-08
-- thursday-affirmations — 2026-05-10
-- manifesting-affirmations-for-money — 2026-05-12
-- money-comes-to-me-easily — 2026-05-14
-- i-am-wealthy-affirmation — 2026-05-16
+- Schedule starting 2026-05-18, 2 days apart
 
 ## SEO checklist — verify before every commit
-- [ ] meta description present
+- [ ] meta description present (max 150 chars)
 - [ ] canonical URL correct
-- [ ] og:title, og:description, og:type, og:url, og:site_name present
-- [ ] twitter:card, twitter:title, twitter:description present
+- [ ] og:type, og:title, og:description, og:url, og:site_name present
+- [ ] og:image pointing to absolute card.svg URL
+- [ ] twitter:card = summary_large_image, twitter:title, twitter:description, twitter:image present
 - [ ] Article JSON-LD with correct datePublished
-- [ ] FAQPage JSON-LD matching actual FAQ items in post
+- [ ] FAQPage JSON-LD matching actual FAQ items exactly
 - [ ] publish-date meta set
-- [ ] data-published="true" on body (for already-live posts only)
+- [ ] noindex,nofollow on scheduled posts (remove on live posts)
+- [ ] data-published="true" on body — ONLY for already-live posts, never scheduled
+- [ ] card.svg exists in post directory
+- [ ] Author box present before </article>
+- [ ] GA4 snippet present
+- [ ] Two-row footer with legal links
 
-## How to add a new blog post
+## How to add a new blog post (correct process)
 1. Create /blog/[slug]/index.html following the blog post structure above
-2. Set <meta name="publish-date" content="YYYY-MM-DD">
-3. Set <body data-published="true">
-4. Link to parent collection in closing paragraph
-5. Commit and push — GitHub Pages rebuilds in ~2 min
-6. GA4 tracking fires automatically (once GA is set up)
+2. Create /blog/[slug]/card.svg following the SVG template above
+3. Set `<meta name="publish-date" content="YYYY-MM-DD">` — pick a date 2 days after the last scheduled post
+4. Set `<meta name="robots" content="noindex,nofollow">` — REQUIRED for all scheduled posts
+5. Do NOT set data-published="true" — leave body tag as `<body>`
+6. Do NOT add to blog/index.html or sitemap.xml — the Action handles this on publish day
+7. Add GA4 snippet to <head>
+8. Commit and push ONLY the new post's index.html and card.svg
+9. Update the "Scheduled" list in this CLAUDE.md
+10. After it publishes: submit URL in Google Search Console → URL Inspection → Request Indexing
 
 ## Git
 - Repo: https://github.com/abjohansson/moneyaffirmations.co
 - Branch: main
 - Push via HTTPS (credentials stored)
+- Always git pull --rebase before pushing to avoid conflicts with the publish Action
