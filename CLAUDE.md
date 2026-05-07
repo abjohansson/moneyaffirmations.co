@@ -166,6 +166,13 @@ Every blog post must include ALL of the following in <head>, filled in correctly
 Each blog post has: <meta name="publish-date" content="YYYY-MM-DD">
 GitHub Action runs 7am UTC daily, marks posts published, updates blog/index.html and sitemap.xml.
 
+### CRITICAL scheduling rules — never break these:
+- NEVER manually add scheduled/future posts to blog/index.html — the Action does this on publish day
+- NEVER manually add scheduled/future posts to sitemap.xml — the Action does this on publish day
+- ALL unpublished posts MUST have `<meta name="robots" content="noindex,nofollow">` in <head>
+- Do NOT set `<body data-published="true">` on scheduled posts — only already-live posts get this
+- When committing a new scheduled post, only commit: the post's index.html and card.svg — nothing else
+
 ## Revenue
 1. Google AdSense (primary — GA4 ID: G-45V37Y4KCX)
 2. Affiliates: YNAB, Acorns, Coinbase, money mindset books
