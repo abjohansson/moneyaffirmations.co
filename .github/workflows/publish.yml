@@ -90,11 +90,11 @@ jobs:
             const escapedTitle   = title.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             const escapedExcerpt = excerpt.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             return [
-              `    <article class="blog-card">`,
-              `      <h2>${escapedTitle}</h2>`,
-              excerpt ? `      <p>${escapedExcerpt}</p>` : '',
-              `      <a href="${slug}">Read More &rarr;</a>`,
-              `    </article>`,
+              `          <article class="content-card blog-card">`,
+              `            <h2 style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);margin:.5rem 0">${escapedTitle}</h2>`,
+              excerpt ? `            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.6;margin-bottom:1rem">${escapedExcerpt}</p>` : '',
+              `            <a href="${slug}" style="color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600">Read More &rarr;</a>`,
+              `          </article>`,
             ].filter(Boolean).join('\n');
           }
 
