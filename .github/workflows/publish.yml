@@ -55,6 +55,8 @@ jobs:
               /Scheduled for ([\w]+ \d+, \d{4}) · 07:00 UTC/,
               'Published $1'
             );
+            // Remove noindex tag added to scheduled posts
+            html = html.replace(/\s*<meta name="robots" content="noindex,nofollow">\n?/g, '\n');
             return html;
           }
 
