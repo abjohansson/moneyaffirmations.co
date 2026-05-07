@@ -307,8 +307,8 @@ GitHub Action runs 07:00 UTC daily. On publish day it:
 - [ ] meta description present (max 150 chars)
 - [ ] canonical URL correct
 - [ ] og:type, og:title, og:description, og:url, og:site_name present
-- [ ] og:image pointing to absolute card.svg URL
-- [ ] twitter:card = summary_large_image, twitter:title, twitter:description, twitter:image present
+- [ ] og:image pointing to absolute card.svg URL (https://moneyaffirmations.co/blog/[slug]/card.svg)
+- [ ] twitter:card = summary_large_image, twitter:title, twitter:description, twitter:image present (same absolute URL)
 - [ ] Article JSON-LD with correct datePublished
 - [ ] FAQPage JSON-LD matching actual FAQ items exactly
 - [ ] publish-date meta set
