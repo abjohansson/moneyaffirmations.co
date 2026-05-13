@@ -312,9 +312,16 @@ GitHub Action runs 07:00 UTC daily. On publish day it:
 - financially-free-affirmations — 2026-06-23 (wealth)
 - i-am-a-money-magnet-affirmation — 2026-06-25 (money)
 - 369-affirmations-for-money — 2026-06-27 (manifestation)
+- morning-gratitude-affirmations — 2026-06-29 (prosperity)
+- tuesday-morning-affirmations — 2026-07-01 (prosperity)
+- thursday-morning-affirmations — 2026-07-03 (prosperity)
+- positive-affirmations-for-wealth-and-success — 2026-07-05 (wealth)
+- affirmations-for-wealth-and-abundance — 2026-07-07 (wealth)
+- money-affirmations-for-wealth-and-prosperity — 2026-07-09 (wealth)
+- affirmations-for-success-and-wealth — 2026-07-11 (wealth)
 
 ## Next blog posts to write (priority order)
-- Next available date: 2026-06-29
+- Next available date: 2026-07-13
 1. Wednesday Affirmations
 2. Weekend Affirmations
 3. Positive Affirmations for Money
