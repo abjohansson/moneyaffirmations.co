@@ -283,25 +283,29 @@ GitHub Action runs 07:00 UTC daily. On publish day it:
 - money-mindset — 2026-05-06
 
 ### Scheduled 🕐 (noindex, not in blog index or sitemap yet)
-- tuesday-affirmations — 2026-05-08
-- money-and-abundance-affirmations — 2026-05-09
-- thursday-affirmations — 2026-05-10
-- prosperity-affirmations — 2026-05-11
-- manifesting-affirmations-for-money — 2026-05-12
+- tuesday-affirmations — 2026-05-08 (published, Action ran ✅)
+- money-and-abundance-affirmations — 2026-05-09 (published ✅)
+- thursday-affirmations — 2026-05-10 (published ✅)
+- prosperity-affirmations — 2026-05-11 (published ✅)
+- manifesting-affirmations-for-money — 2026-05-12 (published ✅)
 - powerful-money-affirmations — 2026-05-13
 - money-comes-to-me-easily — 2026-05-14
 - i-am-wealthy-affirmation — 2026-05-16
+- financial-abundance-affirmations — 2026-05-18
+- wealth-manifestation-affirmations — 2026-05-20
+- morning-affirmations — 2026-05-22
+- louise-hay-morning-affirmations — 2026-05-24
+- gratitude-affirmations — 2026-05-26
+- business-affirmations — 2026-05-28
+- florence-scovel-shinn-affirmations — 2026-05-30
+- manifestation-affirmations — 2026-06-01
+- saturday-affirmations — 2026-06-03
+- monday-morning-affirmations — 2026-06-05
+- friday-morning-affirmations — 2026-06-07
 
 ## Next blog posts to write (priority order)
-1. Gratitude Affirmations
-2. Business Affirmations
-3. Wednesday Affirmations
-4. Weekend Affirmations
-5. Positive Affirmations for Money
-6. Affirmations for Debt-Free Living
-7. Abundance Mindset Affirmations
-8. Affirmations for Receiving Money
-- Schedule starting 2026-05-18, 2 days apart
+- Next available date: 2026-06-09
+- Previous priority list (Wednesday, Weekend, Positive Affirmations for Money, Debt-Free Living, Abundance Mindset, Receiving Money) still to be written
 
 ## SEO checklist — verify before every commit
 - [ ] meta description present (max 150 chars)
