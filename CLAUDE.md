@@ -344,6 +344,12 @@ GitHub Action runs 07:00 UTC daily. On publish day it:
 5. Abundance Mindset Affirmations
 6. Affirmations for Receiving Money
 
+## Sitemap maintenance — CRITICAL
+- sitemap.xml must contain EVERY live page: homepage, all collection pages, blog index, wallpapers, affirmation-cards, all utility pages, and ALL published blog posts
+- The GitHub Action only adds scheduled posts on their publish day — it does NOT add manually published posts
+- Any post committed with data-published="true" must be manually added to sitemap.xml in the same commit
+- After any batch of posts, verify sitemap.xml with: grep -c "<loc>" sitemap.xml — count must match total live pages
+
 ## SEO checklist — verify before every commit
 - [ ] meta description present (max 150 chars)
 - [ ] canonical URL correct
