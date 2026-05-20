@@ -1,0 +1,41 @@
+name: Convert Pinterest SVGs to PNG
+
+on:
+  push:
+    paths:
+      - 'pinterest/**/*.svg'
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y librsvg2-bin libimage-exiftool-perl
+
+      - name: Convert SVGs to PNG and strip metadata
+        run: |
+          find pinterest -name "*.svg" | while read svg; do
+            png="${svg%.svg}.png"
+            rsvg-convert -w 1000 -h 1500 "$svg" -o "$png"
+            exiftool -all= -overwrite_original "$png"
+            echo "Converted and stripped: $svg → $png"
+          done
+
+      - name: Commit PNGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pinterest/*.png
+          git diff --staged --quiet || git commit -m "Auto-convert Pinterest SVGs to PNG [skip ci]"
+          git push

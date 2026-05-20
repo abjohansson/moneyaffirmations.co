@@ -1,0 +1,21 @@
+<svg viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="1500" fill="#0D0C0A"/>
+  <rect x="20" y="20" width="960" height="1460" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.3"/>
+  <rect x="0" y="0" width="1000" height="100" fill="#C9A84C" opacity="0.08"/>
+  <text x="500" y="62" text-anchor="middle" fill="#C9A84C" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="700" letter-spacing="4">MONEYAFFIRMATIONS.CO</text>
+  <line x1="60" y1="120" x2="940" y2="120" stroke="#C9A84C" stroke-width="2" opacity="0.6"/>
+  <line x1="60" y1="128" x2="940" y2="128" stroke="#C9A84C" stroke-width="0.5" opacity="0.3"/>
+  <polygon points="500,180 520,210 500,240 480,210" fill="#C9A84C" opacity="0.8"/>
+  <polygon points="500,185 514,210 500,235 486,210" fill="#0D0C0A"/>
+  <text x="500" y="400" text-anchor="middle" fill="#8A8070" font-family="Georgia,'Times New Roman',serif" font-size="30" font-style="italic" letter-spacing="1">say this out loud:</text>
+  <text x="500" y="560" text-anchor="middle" fill="#F8F2E4" font-family="Georgia,'Times New Roman',serif" font-size="72" font-weight="700">Wealth</text>
+  <text x="500" y="650" text-anchor="middle" fill="#F8F2E4" font-family="Georgia,'Times New Roman',serif" font-size="72" font-weight="700">is my</text>
+  <text x="500" y="740" text-anchor="middle" fill="#C9A84C" font-family="Georgia,'Times New Roman',serif" font-size="72" font-weight="700">birthright.</text>
+  <text x="500" y="860" text-anchor="middle" fill="#F8F2E4" font-family="Georgia,'Times New Roman',serif" font-size="52" font-weight="400" font-style="italic">I claim it now.</text>
+  <line x1="60" y1="940" x2="940" y2="940" stroke="#C9A84C" stroke-width="0.5" opacity="0.3"/>
+  <line x1="60" y1="948" x2="940" y2="948" stroke="#C9A84C" stroke-width="2" opacity="0.6"/>
+  <text x="500" y="1040" text-anchor="middle" fill="#8A8070" font-family="Georgia,'Times New Roman',serif" font-size="28" font-style="italic">Learn how to use affirmations</text>
+  <text x="500" y="1084" text-anchor="middle" fill="#8A8070" font-family="Georgia,'Times New Roman',serif" font-size="28" font-style="italic">for maximum results at</text>
+  <text x="500" y="1145" text-anchor="middle" fill="#C9A84C" font-family="Georgia,'Times New Roman',serif" font-size="38" font-weight="600">MoneyAffirmations.co</text>
+  <text x="500" y="1456" text-anchor="middle" fill="#C9A84C" font-family="Georgia,'Times New Roman',serif" font-size="22" font-style="italic" opacity="0.5">MoneyAffirmations.co</text>
+</svg>

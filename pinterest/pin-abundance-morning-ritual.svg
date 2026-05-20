@@ -1,0 +1,23 @@
+<svg viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="1500" fill="#0D0C0A"/>
+  <rect x="20" y="20" width="960" height="1460" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.3"/>
+  <text x="500" y="110" text-anchor="middle" fill="#C9A84C" font-family="Georgia,'Times New Roman',serif" font-size="22" font-style="italic" letter-spacing="3">✦  morning ritual  ✦</text>
+  <line x1="60" y1="138" x2="940" y2="138" stroke="#C9A84C" stroke-width="0.5" opacity="0.3"/>
+  <text x="500" y="216" text-anchor="middle" fill="#8A8070" font-family="Georgia,'Times New Roman',serif" font-size="26" font-style="italic">Say this the moment you wake up.</text>
+  <text x="500" y="260" text-anchor="middle" fill="#8A8070" font-family="Georgia,'Times New Roman',serif" font-size="26" font-style="italic">Repeat three times.</text>
+  <line x1="60" y1="296" x2="940" y2="296" stroke="#C9A84C" stroke-width="0.5" opacity="0.3"/>
+  <rect x="60" y="320" width="880" height="660" fill="#1A1813" rx="4"/>
+  <text x="500" y="480" text-anchor="middle" fill="#F8F2E4" font-family="Georgia,'Times New Roman',serif" font-size="50" font-style="italic" font-weight="400">"I am open</text>
+  <text x="500" y="548" text-anchor="middle" fill="#F8F2E4" font-family="Georgia,'Times New Roman',serif" font-size="50" font-style="italic" font-weight="400">and receptive</text>
+  <text x="500" y="616" text-anchor="middle" fill="#F8F2E4" font-family="Georgia,'Times New Roman',serif" font-size="50" font-style="italic" font-weight="400">to all the wealth</text>
+  <text x="500" y="684" text-anchor="middle" fill="#C9A84C" font-family="Georgia,'Times New Roman',serif" font-size="50" font-style="italic" font-weight="400">life offers me."</text>
+  <line x1="300" y1="860" x2="700" y2="860" stroke="#C9A84C" stroke-width="0.5" opacity="0.4"/>
+  <text x="500" y="910" text-anchor="middle" fill="#8A8070" font-family="Georgia,'Times New Roman',serif" font-size="24" font-style="italic">80 abundance affirmations at</text>
+  <text x="500" y="950" text-anchor="middle" fill="#C9A84C" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="600">MoneyAffirmations.co</text>
+  <text x="500" y="1060" text-anchor="middle" fill="#8A8070" font-family="Georgia,'Times New Roman',serif" font-size="24">Day 1 of your practice:</text>
+  <text x="500" y="1110" text-anchor="middle" fill="#F8F2E4" font-family="Georgia,'Times New Roman',serif" font-size="28" font-style="italic">Write this affirmation in your journal</text>
+  <text x="500" y="1150" text-anchor="middle" fill="#F8F2E4" font-family="Georgia,'Times New Roman',serif" font-size="28" font-style="italic">every morning for 21 days.</text>
+  <polygon points="500,1260 510,1278 500,1296 490,1278" fill="#C9A84C" opacity="0.5"/>
+  <text x="500" y="1350" text-anchor="middle" fill="#8A8070" font-family="Georgia,'Times New Roman',serif" font-size="22" font-style="italic">save this pin to start tomorrow</text>
+  <text x="500" y="1456" text-anchor="middle" fill="#C9A84C" font-family="Georgia,'Times New Roman',serif" font-size="22" font-style="italic" opacity="0.5">MoneyAffirmations.co</text>
+</svg>
