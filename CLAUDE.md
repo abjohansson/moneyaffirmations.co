@@ -334,9 +334,18 @@ GitHub Action runs 07:00 UTC daily. On publish day it:
 - affirmations-for-good-luck — 2026-08-06 (abundance)
 - luck-affirmations — 2026-08-08 (abundance)
 - positive-money-mindset — 2026-08-10 (money)
+- saving-mindset — 2026-08-12 (wealth)
+- i-am-affirmations-abundance — 2026-08-14 (abundance)
+- affirmations-before-work-for-money-confidence — 2026-08-16 (money)
+- payday-affirmations-for-receiving-money — 2026-08-18 (money)
+- affirmations-before-paying-bills — 2026-08-20 (money)
+- budgeting-affirmations-for-financial-control — 2026-08-22 (wealth)
+- affirmations-for-money-anxiety — 2026-08-24 (money)
+- sunday-affirmations-for-a-prosperous-week — 2026-08-26 (prosperity)
+- wednesday-affirmations-for-money-momentum — 2026-08-28 (money)
 
 ## Next blog posts to write (priority order)
-- Next available date: 2026-08-12
+- Next available date: 2026-08-30
 1. Wednesday Affirmations
 2. Weekend Affirmations
 3. Positive Affirmations for Money
