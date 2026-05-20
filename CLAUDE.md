@@ -378,6 +378,16 @@ GitHub Action runs 07:00 UTC daily. On publish day it:
 9. Update the "Scheduled" list in this CLAUDE.md
 10. After it publishes: submit URL in Google Search Console → URL Inspection → Request Indexing
 
+## Pinterest pipeline
+- Pins live in `/pinterest/` folder — SVGs only, PNGs are auto-generated
+- GitHub Action: `.github/workflows/pinterest-convert.yml` — triggers on any SVG push to `/pinterest/`, converts to 1000×1500 PNG via rsvg-convert, strips all metadata with exiftool, commits PNGs back with `[skip ci]`
+- After pushing new SVGs, run `git pull --rebase` to get the PNGs onto the local machine
+- Metadata sheet: `/pinterest/pinterest-content.csv` — import to Google Sheets for pin titles, descriptions, URLs, hashtags
+- Pin design styles (rotate for variety): hero / list / quote card / branded bold / morning ritual
+- SVG viewBox: `0 0 1000 1500` — Pinterest optimal 2:3 ratio
+- Brand colours apply: dark bg #0D0C0A, gold #C9A84C, cream #F8F2E4
+- AdSense publisher ID: `ca-pub-8600453902197851` — already on all pages, include on every new page
+
 ## Git
 - Repo: https://github.com/abjohansson/moneyaffirmations.co
 - Branch: main
