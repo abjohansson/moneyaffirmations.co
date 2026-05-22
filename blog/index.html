@@ -179,18 +179,21 @@
 <body style="background:var(--dark);color:var(--cream);font-family:'DM Sans',sans-serif;margin:0">
 
   <header class="site-header">
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem">
-      <a href="/" style="font-family:'Playfair Display',serif;font-style:italic;color:var(--gold);text-decoration:none;font-size:1.3rem">MoneyAffirmations.co</a>
-      <nav>
-        <a href="/" class="nav-link">Home</a>
-        <a href="/money-affirmations/" class="nav-link">Money Affirmations</a>
-        <a href="/abundance-affirmations/" class="nav-link">Abundance</a>
-        <a href="/wealth-affirmations/" class="nav-link">Wealth</a>
-        <a href="/manifestation-affirmations/" class="nav-link">Manifestation</a>
-        <a href="/blog/" class="nav-link">Blog</a>
-      </nav>
-    </div>
-  </header>
+  <div class="header-inner">
+    <a href="/" class="logo">MoneyAffirmations.co</a>
+    <button class="nav-toggle" aria-label="Open navigation" onclick="var n=this.closest('header').querySelector('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <a href="/" class="nav-link">Home</a>
+      <a href="/money-affirmations/" class="nav-link">Money Affirmations</a>
+      <a href="/abundance-affirmations/" class="nav-link">Abundance</a>
+      <a href="/wealth-affirmations/" class="nav-link">Wealth</a>
+      <a href="/manifestation-affirmations/" class="nav-link">Manifestation</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+    </nav>
+  </div>
+</header>
 
   <section class="hero-page">
     <div class="container">
