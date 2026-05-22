@@ -95,6 +95,28 @@ blog/powerful-money-affirmations/index.html
 - NEVER show dataset IDs in affirmation cards — CSS counter only
 - All affirmations: first person, present tense, positive
 
+## Header structure — every page must use this exact header (hamburger included)
+```html
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">MoneyAffirmations.co</a>
+    <button class="nav-toggle" aria-label="Open navigation" onclick="var n=this.closest('header').querySelector('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <a href="/" class="nav-link">Home</a>
+      <a href="/money-affirmations/" class="nav-link">Money Affirmations</a>
+      <a href="/abundance-affirmations/" class="nav-link">Abundance</a>
+      <a href="/wealth-affirmations/" class="nav-link">Wealth</a>
+      <a href="/manifestation-affirmations/" class="nav-link">Manifestation</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+    </nav>
+  </div>
+</header>
+```
+- NEVER use inline styles on the header div or nav — use the classes above
+- The hamburger JS is inline on the button — no external JS file needed
+
 ## Footer structure — every page must have this exact two-row footer
 ```html
 <footer class="site-footer">

@@ -61,20 +61,22 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8600453902197851" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <nav class="site-nav">
-      <a href="/" class="nav-logo">MoneyAffirmations.co</a>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/money-affirmations/">Money Affirmations</a></li>
-        <li><a href="/abundance-affirmations/">Abundance</a></li>
-        <li><a href="/wealth-affirmations/">Wealth</a></li>
-        <li><a href="/manifestation-affirmations/">Manifestation</a></li>
-        <li><a href="/prosperity-affirmations/">Prosperity</a></li>
-        <li><a href="/blog/">Blog</a></li>
-      </ul>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">MoneyAffirmations.co</a>
+    <button class="nav-toggle" aria-label="Open navigation" onclick="var n=this.closest('header').querySelector('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <a href="/" class="nav-link">Home</a>
+      <a href="/money-affirmations/" class="nav-link">Money Affirmations</a>
+      <a href="/abundance-affirmations/" class="nav-link">Abundance</a>
+      <a href="/wealth-affirmations/" class="nav-link">Wealth</a>
+      <a href="/manifestation-affirmations/" class="nav-link">Manifestation</a>
+      <a href="/blog/" class="nav-link">Blog</a>
     </nav>
-  </header>
+  </div>
+</header>
 
   <section class="hero">
     <div class="container">

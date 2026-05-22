@@ -91,9 +91,12 @@ details.faq-item p{margin-top:.75rem;line-height:1.8}
 </head>
 <body>
 <header class="site-header">
-  <div style="max-width:1100px;margin:0 auto;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
-    <a href="/" style="font-family:'Playfair Display',serif;font-style:italic;color:#C9A84C;text-decoration:none;font-size:1.3rem">MoneyAffirmations.co</a>
-    <nav style="display:flex;gap:1.5rem;flex-wrap:wrap">
+  <div class="header-inner">
+    <a href="/" class="logo">MoneyAffirmations.co</a>
+    <button class="nav-toggle" aria-label="Open navigation" onclick="var n=this.closest('header').querySelector('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
       <a href="/" class="nav-link">Home</a>
       <a href="/money-affirmations/" class="nav-link">Money Affirmations</a>
       <a href="/abundance-affirmations/" class="nav-link">Abundance</a>
