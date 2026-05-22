@@ -343,9 +343,22 @@ GitHub Action runs 07:00 UTC daily. On publish day it:
 - affirmations-for-money-anxiety — 2026-08-24 (money)
 - sunday-affirmations-for-a-prosperous-week — 2026-08-26 (prosperity)
 - wednesday-affirmations-for-money-momentum — 2026-08-28 (money)
+- affirmations-before-a-job-interview — 2026-08-30 (money)
+- affirmations-before-asking-for-a-raise — 2026-09-01 (money)
+- affirmations-before-a-sales-call — 2026-09-03 (money)
+- affirmations-for-saving-money — 2026-09-05 (wealth)
+- affirmations-before-investing — 2026-09-07 (wealth)
+- affirmations-for-unexpected-money — 2026-09-09 (abundance)
+- affirmations-for-freelance-clients — 2026-09-11 (money)
+- affirmations-for-debt-payoff — 2026-09-13 (wealth)
+- affirmations-for-checking-your-bank-account — 2026-09-15 (money)
+- affirmations-for-a-new-job — 2026-09-17 (money)
+- affirmations-for-side-hustle-success — 2026-09-19 (money)
+- affirmations-for-financial-discipline — 2026-09-21 (wealth)
+- affirmations-for-holiday-spending — 2026-09-23 (money)
 
 ## Next blog posts to write (priority order)
-- Next available date: 2026-08-30
+- Next available date: 2026-09-25
 1. Wednesday Affirmations
 2. Weekend Affirmations
 3. Positive Affirmations for Money
