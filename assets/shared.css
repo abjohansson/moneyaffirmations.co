@@ -122,8 +122,8 @@ ol {
 .site-header nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
 }
 
 .site-header nav a {
