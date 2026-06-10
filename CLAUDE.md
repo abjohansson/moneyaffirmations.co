@@ -379,14 +379,76 @@ GitHub Action runs 07:00 UTC daily. On publish day it:
 - affirmations-for-financial-discipline — 2026-09-21 (wealth)
 - affirmations-for-holiday-spending — 2026-09-23 (money)
 
-## Next blog posts to write (priority order)
-- Next available date: 2026-09-25
-1. Wednesday Affirmations
-2. Weekend Affirmations
-3. Positive Affirmations for Money
-4. Affirmations for Debt-Free Living
-5. Abundance Mindset Affirmations
-6. Affirmations for Receiving Money
+## Next blog posts to write (priority order) — 60-post pipeline
+- Next available date: 2026-09-25 (posts 2 days apart → pipeline ends ~2027-01-21)
+- Methodology: keyword set = Google Keyword Planner export (June 2026), filtered to money/wealth/abundance/prosperity/manifestation niche. Sorted EASIEST-FIRST by competition index (lower = easier to rank), volume as tiebreaker.
+- IMPORTANT KW caveat: KP volume is bucketed (only 50000/5000/500/50 appear). 5000 = real 1K–10K/mo; 500 = real 100–1K/mo. Volume is NOT a reliable tiebreaker inside a bucket — competition index is the real signal.
+- NEVER write lottery / gambling / "winning the lottery" posts — AdSense policy risk to ad serving and account standing. Permanently excluded.
+- Crystals: only via long-tail stone+affirmation angle (citrine/moonstone, comp ~10). Generic "crystals for money" (comp 95+) is too competitive — skip.
+- Columns: # · Title · target keyword · vol · comp · parent collection · suggested slug
+
+1. Louise Hay Money & Prosperity Affirmations · louise hay affirmations for money · 500 · 0 · Abundance · louise-hay-money-affirmations
+2. Money Loves Me Affirmations · money loves me affirmations · 500 · 0 · Money · money-loves-me-affirmations
+3. Money Mantras · mantras for abundance · 500 · 0 · Abundance · money-mantras
+4. Dream Job Affirmations · dream job affirmations · 500 · 0 · Money · dream-job-affirmations
+5. Millionaire Affirmations · millionaire affirmations · 500 · 1 · Wealth · millionaire-affirmations
+6. Affirmations for Getting a Job · affirmations for getting a job · 500 · 1 · Money · affirmations-for-getting-a-job
+7. Bedtime Affirmations for Wealth · bedtime affirmations for success · 500 · 1 · Wealth · bedtime-affirmations-for-wealth
+8. Abraham Hicks Money Affirmations · abraham hicks on money · 500 · 2 · Manifestation · abraham-hicks-money-affirmations
+9. Affirmations to Manifest a House · affirmations for manifesting a house · 500 · 2 · Wealth · affirmations-to-manifest-a-house
+10. Subliminal Money Affirmations · subliminal affirmations · 500 · 2 · Manifestation · subliminal-money-affirmations
+11. The Law of Abundance · law of abundance · 5000 · 3 · Abundance · the-law-of-abundance
+12. Financial Manifestation · financial manifestation · 500 · 3 · Wealth · financial-manifestation
+13. Manifest Money While You Sleep · manifest money while you sleep · 500 · 4 · Manifestation · manifest-money-while-you-sleep
+14. Advanced Manifestation Techniques · advanced manifestation techniques · 500 · 4 · Manifestation · advanced-manifestation-techniques
+15. Money Flows to Me Easily · money flows to me easily · 500 · 4 · Money · money-flows-to-me-easily
+16. Instant Money Manifestation · instant money manifestation · 500 · 5 · Manifestation · instant-money-manifestation
+17. Night Affirmations for Success · night affirmations for success · 500 · 5 · Wealth · night-affirmations-for-success
+18. Manifesting Abundance · manifesting abundance · 5000 · 6 · Abundance · manifesting-abundance
+19. Meditation Affirmations for Money · meditation affirmations · 5000 · 6 · Manifestation · meditation-affirmations-for-money
+20. I Am Rich Affirmations · i am rich affirmations · 500 · 6 · Wealth · i-am-rich-affirmations
+21. Best Money Affirmations (Ultimate List) · best affirmations for money · 500 · 6 · Money · best-money-affirmations
+22. Money Manifestation Methods · money manifestation methods · 500 · 10 · Manifestation · money-manifestation-methods
+23. Most Powerful Manifestation Affirmations · most powerful affirmations for manifestation · 500 · 10 · Manifestation · most-powerful-manifestation-affirmations
+24. Money Bowl Affirmations · money bowl affirmations · 500 · 10 · Manifestation · money-bowl-affirmations
+25. Manifest Prosperity · manifest prosperity · 500 · 10 · Prosperity · manifest-prosperity
+26. Citrine Affirmations for Money · citrine affirmation · 500 · 10 · Abundance · citrine-affirmations-for-money
+27. Affirmations for Job Success · affirmations for job success · 500 · 11 · Money · affirmations-for-job-success
+28. Crystal Affirmations for Abundance · moonstone affirmation · 500 · 11 · Abundance · crystal-affirmations-for-abundance
+29. Manifesting Millions · manifesting millions · 500 · 12 · Wealth · manifesting-millions
+30. Manifest Money Fast · manifest money fast · 500 · 14 · Manifestation · manifest-money-fast
+31. Affirmations to Attract Fortune · attract fortune · 500 · 14 · Abundance · affirmations-to-attract-fortune
+32. 5 Ways to Attract Money · 5 ways to attract money · 500 · 14 · Money · 5-ways-to-attract-money
+33. How to Manifest Money · manifest money · 5000 · 15 · Manifestation · how-to-manifest-money
+34. Rich Affirmations · rich affirmations · 5000 · 16 · Wealth · rich-affirmations
+35. Manifestation Quotes for Money · manifestation quotes for money · 500 · 18 · Manifestation · manifestation-quotes-for-money
+36. Manifest Money in 5 Minutes · manifest money in 5 minutes · 500 · 20 · Manifestation · manifest-money-in-5-minutes
+37. Abundance and Prosperity Affirmations · abundance and prosperity affirmations · 500 · 21 · Prosperity · abundance-and-prosperity-affirmations
+38. Financial Affirmations · financial affirmations · 500 · 22 · Wealth · financial-affirmations
+39. Morning Manifestation Affirmations · morning manifestation affirmations · 500 · 22 · Manifestation · morning-manifestation-affirmations
+40. How to Attract Money · attract money · 5000 · 24 · Money · how-to-attract-money
+41. Money Attracts Money · money attract money · 5000 · 24 · Money · money-attracts-money
+42. Abundance Money Affirmations · abundance money affirmations · 500 · 24 · Abundance · abundance-money-affirmations
+43. Affirmations for Success · affirmations for success · 5000 · 28 · Wealth · affirmations-for-success
+44. Short Gratitude Affirmations · short gratitude affirmations · 500 · 30 · Prosperity · short-gratitude-affirmations
+45. Napoleon Hill Affirmations (Think & Grow Rich) · (brand/gap, no exact KW) · — · — · Wealth · napoleon-hill-affirmations
+46. Wealth Mindset Affirmations · (gap, no exact KW) · — · — · Wealth · wealth-mindset-affirmations
+47. Money Confidence Affirmations · (gap, money-framed) · — · — · Money · money-confidence-affirmations
+48. Affirmations to Overcome Scarcity Mindset · (gap, money-framed) · — · — · Money · affirmations-to-overcome-scarcity-mindset
+49. Law of Attraction Money (Guide) · law of attraction money · 500 · 33 · Manifestation · law-of-attraction-money
+50. Joe Vitale Money Affirmations (The Attractor Factor) · the secret to attracting money joe vitale · 500 · 35 · Manifestation · joe-vitale-money-affirmations
+51. Affirmations for Success at Work · positive affirmations for work success · 500 · 40 · Money · affirmations-for-success-at-work
+52. Bible Affirmations for Wealth · biblical affirmations · 5000 · 49 · Prosperity · bible-affirmations-for-wealth
+53. Things That Attract Money · things that attract money · 500 · 49 · Money · things-that-attract-money
+54. Money Affirmation Quotes · money affirmation quotes · 500 · 50 · Money · money-affirmation-quotes
+55. Vision Board Money Affirmations · vision board money affirmations · 500 · 52 · Manifestation · vision-board-money-affirmations
+56. Christian Money Affirmations · christian affirmations · 5000 · 66 · Prosperity · christian-money-affirmations
+57. Daily Gratitude Affirmations · daily gratitude affirmations · 500 · 68 · Prosperity · daily-gratitude-affirmations
+58. Abundance Quotes · affirmation abundance quotes · 500 · 99 · Abundance · abundance-quotes
+59. Money Journaling Affirmations · journaling affirmations · 5000 · 100 · Money · money-journaling-affirmations
+60. Abundance Mindset Affirmations · (gap, no exact KW) · — · — · Abundance · abundance-mindset-affirmations
+
+### Quotes posts (#35, 54, 58) are a NEW content type — adapt blog structure: replace the numbered affirmation list with a quotes list (attributed where known), keep all other required sections (head tags, FAQ, author box, card.svg, GA4).
 
 ## Sitemap maintenance — CRITICAL
 - sitemap.xml must contain EVERY live page: homepage, all collection pages, blog index, wallpapers, affirmation-cards, all utility pages, and ALL published blog posts
